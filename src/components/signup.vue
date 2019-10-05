@@ -25,7 +25,7 @@
           </div>
         </label>
 
-        <button type="submit">submit</button>
+        <router-link to="/personalinfo" ><button type="submit">submit</button></router-link>
       </form>
     </div>
     <div class="posts"></div>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '../components/signup'
 import login from '../components/Login'
 import FullSignUp from '../components/fullSignUp'
+import PersonalInfo from '../components/personalInfo'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
     {
       path: '/signup',
       component: FullSignUp,
+      props: (route) => ({ name: route.query.name })
+    },
+    {
+      path: '/personalinfo',
+      component: PersonalInfo,
       props: (route) => ({ name: route.query.name })
     }
   ]
