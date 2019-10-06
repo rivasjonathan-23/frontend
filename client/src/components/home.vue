@@ -1,52 +1,24 @@
 <template>
+  <div>
     <div class="container">
-      <form class="col-sm-3">
-        <h1 class="sign">Login</h1>
-        <label>
-          <p class="label-txt">ENTER USERNAME</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-        <label>
-          <p class="label-txt">ENTER PASSWORD</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-
-        <button type="submit">submit</button>
-      </form>
+      <SignUp></SignUp>
     </div>
+    <div class="posts"></div>
+  </div>
 </template>
 
-
 <script>
-import JQuery from "jquery";
+import SignUp from "./signUp";
+
 
 export default {
-  name: "login",
-  mounted() {
-    $(".input").focus(function() {
-      $(this)
-        .parent()
-        .find(".label-txt")
-        .addClass("label-active");
-    });
-
-    $(".input").focusout(function() {
-      if ($(this).val() == "") {
-        $(this)
-          .parent()
-          .find(".label-txt")
-          .removeClass("label-active");
-      }
-    });
-  }
+  name: "Home",
+  components: { 
+    SignUp 
+  },
 };
 </script>
+
 
 <style scoped>
 .col-sm-3 {
@@ -54,21 +26,26 @@ export default {
   width: 400px;
   margin-top: 90px;
   margin-bottom: 40px;
+  margin-right: 10%;
+  margin-left: 10%;
   background: white;
-  padding: 40px;
+  padding: 4%;
   text-align: center;
+  float: right;
   -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
+.posts {
+  height: 1000px;
+  background-color: white;
+}
+
 .container {
-  justify-content: center;
-  /* background-image: linear-gradient(to bottom right, white, #d9dcde); */
+  background-image: linear-gradient(to bottom right, white, #d9dcde);
   margin: 0;
   padding-top: 0;
-  padding-left:35%;
-  padding-right: 35%;
   width: 100%;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div id="cont">
-    <form class="col-sm-3">
+    <form class="col-sm-3" v-on:submit="login">
       <h1 class="sign">Sign Up</h1>
       <label>
         <p class="label-txt">USERNAME</p>
@@ -11,36 +11,64 @@
       </label>
       <label>
         <p class="label-txt">PASSWORD</p>
-        <input type="text" class="input" v-model="password">
+        <input type="password" class="input" v-model="password">
         <div class="line-box">
           <div class="line"></div>
         </div>
       </label>
       <label>
         <p class="label-txt">CONFIRM PASSWORD</p>
-        <input type="text" class="input" v-model="confirmpassword">
+        <input type="password" class="input" v-model="confirmpassword">
         <div class="line-box">
           <div class="line"></div>
         </div>
       </label>
 
-      <router-link to="/personalinfo">
-        <button type="submit">submit</button>
-      </router-link>
+      <!-- <router-link to="/personalinfo"> -->
+      <button type="submit">submit</button>
+      <!-- </router-link> -->
     </form>
   </div>
 </template>
 
 <script>
+import $ from "jquery";
+import axios from "axios";
+
+
 export default {
   name: "SignUp",
-  data() {
-    username = "";
-    password = "";
-    confirmpassword = "";
+  data: function() {
+    return {
+      username: "",
+      password: "",
+      confirmpassword: ""
+    };
   },
   methods: {
-    
+    login: e => {
+      e.preventDefault();
+      const newUser = { username: this.username, passwords: this.password };
+      console.log(newUser)
+      // axios.post("http://localhost:5000/login", newUser)
+    }
+  },
+  mounted() {
+    $(".input").focus(function() {
+      $(this)
+        .parent()
+        .find(".label-txt")
+        .addClass("label-active");
+    });
+
+    $(".input").focusout(function() {
+      if ($(this).val() == "") {
+        $(this)
+          .parent()
+          .find(".label-txt")
+          .removeClass("label-active");
+      }
+    });
   }
 };
 </script>
@@ -61,7 +89,6 @@ export default {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-
 
 .posts {
   height: 1000px;

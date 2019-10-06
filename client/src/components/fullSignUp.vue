@@ -1,66 +1,46 @@
 <template>
-  <div class="pholder">
+  <div class="container">
     <center>
-      <div class="pinnerholder">
-        <form id="perinfo" class="col-sm-8">
-          <h4 class="sign">Personal Information</h4>
-          <table>
-            <td>
-              <div class="fname">
-                <label id="fn">
-                  <p class="label-txt">FIRST NAME</p>
-                  <input type="text" class="input">
-                  <div class="line-box">
-                    <div class="line"></div>
-                  </div>
-                </label>
-              </div>
-            </td>
-            <td>
-              <div class="lname">
-                <label id="ln">
-                  <p class="label-txt">LAST NAME</p>
-                  <input type="text" class="input">
-                  <div class="line-box">
-                    <div class="line"></div>
-                  </div>
-                </label>
-              </div>
-            </td>
-          </table>
+      <div class="innercont">
+        <form class="col-sm-4">
+          <h1 class="sign">Sign Up</h1>
           <label>
-            <p class="label-txt">EMAIL ADDRESS</p>
+            <p class="label-txt">USERNAME</p>
             <input type="text" class="input">
             <div class="line-box">
               <div class="line"></div>
             </div>
           </label>
           <label>
-            <p class="label-txt">ADDRESS</p>
+            <p class="label-txt">PASSWORD</p>
             <input type="text" class="input">
             <div class="line-box">
               <div class="line"></div>
             </div>
           </label>
           <label>
-            <p class="label-txt">OCCUPATION</p>
+            <p class="label-txt">CONFIRM PASSWORD</p>
             <input type="text" class="input">
             <div class="line-box">
               <div class="line"></div>
             </div>
           </label>
-          <button type="submit">submit</button>
         </form>
+        <PersonalInfo></PersonalInfo>
       </div>
     </center>
   </div>
 </template>
 
 <script>
-import JQuery from "jquery";
+import PersonalInfo from "./personalInfo";
+import $ from "jquery";
 
 export default {
-  name: "PersonalInfo",
+  name: "FullSignUp",
+  components: {
+    PersonalInfo
+  },
   mounted() {
     $(".input").focus(function() {
       $(this)
@@ -83,23 +63,21 @@ export default {
 
 
 <style scoped>
-#perinfo {
-  float:right;
-  padding: 5%;
-  margin: 0;
-  border-radius: 2px;
+.col-sm-4 {
+  background: #e3e3e3;
+  padding: 4%;
+  text-align: center;
+  border-right: none;
   height: 700px;
-  border: 1px solid lightgrey;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
-
-.pinnerholder {
-  margin:0;
-  padding:0;
-}
-
 .pholder {
-  padding: 10%;
-  width: 100%;
+  padding: 0;
+}
+
+PersonalInfo {
+  border:0;
 }
 
 .fname {
@@ -133,6 +111,25 @@ table {
   margin: 0;
   padding: 0;
   overflow: visible;
+}
+
+.container {
+  /* background-image: linear-gradient(to bottom right, white, #d9dcde); */
+  padding-top: 10%;
+  /* padding-left: 15%;
+  padding-right: 15%; */
+  width: 100%;
+}
+
+.innercont {
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  overflow: hidden;
+  width: 800px;
+  /* height: 100%; */
+  /* margin:10%; */
+  /* background-color: black; */
 }
 
 .body {
