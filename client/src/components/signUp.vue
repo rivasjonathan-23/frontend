@@ -48,9 +48,9 @@ export default {
   methods: {
     login: e => {
       e.preventDefault();
-      const newUser = { username: this.username, passwords: this.password };
-      console.log(newUser)
-      // axios.post("http://localhost:5000/login", newUser)
+      let newUser = { username: "rivas", passwords: "password" };
+      // console.log(newUser)
+      axios.post("http://localhost:5000/login", newUser)
     }
   },
   mounted() {
