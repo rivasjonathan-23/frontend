@@ -1,32 +1,34 @@
 <template>
   <div class="container">
-    <div class="innercont">
-      <form class="col-sm-4">
-        <h1 class="sign">Sign Up</h1>
-        <label>
-          <p class="label-txt">USERNAME</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-        <label>
-          <p class="label-txt">PASSWORD</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-        <label>
-          <p class="label-txt">CONFIRM PASSWORD</p>
-          <input type="text" class="input">
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </label>
-      </form>
-      <PersonalInfo></PersonalInfo>
-    </div>
+    <center>
+      <div class="innercont">
+        <form class="col-sm-4">
+          <h1 class="sign">Sign Up</h1>
+          <label>
+            <p class="label-txt">USERNAME</p>
+            <input type="text" class="input">
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+          <label>
+            <p class="label-txt">PASSWORD</p>
+            <input type="text" class="input">
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+          <label>
+            <p class="label-txt">CONFIRM PASSWORD</p>
+            <input type="text" class="input">
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+        </form>
+        <PersonalInfo></PersonalInfo>
+      </div>
+    </center>
   </div>
 </template>
 
@@ -62,22 +64,20 @@ export default {
 
 <style scoped>
 .col-sm-4 {
-  /* border: 1px solid lightgrey; */
-  /* margin-top: 90px; */
-  /* margin-bottom: 40px;
-  margin-right: 10%;
-  margin-left: 10%; */
   background: #e3e3e3;
   padding: 4%;
   text-align: center;
   border-right: none;
   height: 700px;
-  /* border-radius: 5px; */
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 .pholder {
-  padding:0;
+  padding: 0;
+}
+
+PersonalInfo {
+  border:0;
 }
 
 .fname {
@@ -116,8 +116,8 @@ table {
 .container {
   /* background-image: linear-gradient(to bottom right, white, #d9dcde); */
   padding-top: 10%;
-  padding-left: 15%;
-  padding-right: 15%;
+  /* padding-left: 15%;
+  padding-right: 15%; */
   width: 100%;
 }
 
@@ -126,7 +126,7 @@ table {
   border-radius: 5px;
   border: 1px solid lightgrey;
   overflow: hidden;
-  width: 100%;
+  width: 800px;
   /* height: 100%; */
   /* margin:10%; */
   /* background-color: black; */

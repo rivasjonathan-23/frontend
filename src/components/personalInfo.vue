@@ -1,55 +1,59 @@
 <template>
-<div class="pholder"> 
-  <form id="perinfo" class="col-sm-8">
-    <h4 class="sign">Personal Information</h4>
-    <table>
-      <td>
-        <div class="fname">
-          <label id="fn">
-            <p class="label-txt">FIRST NAME</p>
+  <div class="pholder">
+    <center>
+      <div class="pinnerholder">
+        <form id="perinfo" class="col-sm-8">
+          <h4 class="sign">Personal Information</h4>
+          <table>
+            <td>
+              <div class="fname">
+                <label id="fn">
+                  <p class="label-txt">FIRST NAME</p>
+                  <input type="text" class="input">
+                  <div class="line-box">
+                    <div class="line"></div>
+                  </div>
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="lname">
+                <label id="ln">
+                  <p class="label-txt">LAST NAME</p>
+                  <input type="text" class="input">
+                  <div class="line-box">
+                    <div class="line"></div>
+                  </div>
+                </label>
+              </div>
+            </td>
+          </table>
+          <label>
+            <p class="label-txt">EMAIL ADDRESS</p>
             <input type="text" class="input">
             <div class="line-box">
               <div class="line"></div>
             </div>
           </label>
-        </div>
-      </td>
-      <td>
-        <div class="lname">
-          <label id="ln">
-            <p class="label-txt">LAST NAME</p>
+          <label>
+            <p class="label-txt">ADDRESS</p>
             <input type="text" class="input">
             <div class="line-box">
               <div class="line"></div>
             </div>
           </label>
-        </div>
-      </td>
-    </table>
-    <label>
-      <p class="label-txt">EMAIL ADDRESS</p>
-      <input type="text" class="input">
-      <div class="line-box">
-        <div class="line"></div>
+          <label>
+            <p class="label-txt">OCCUPATION</p>
+            <input type="text" class="input">
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+          <button type="submit">submit</button>
+        </form>
       </div>
-    </label>
-    <label>
-      <p class="label-txt">ADDRESS</p>
-      <input type="text" class="input">
-      <div class="line-box">
-        <div class="line"></div>
-      </div>
-    </label>
-    <label>
-      <p class="label-txt">CURRENT JOB</p>
-      <input type="text" class="input">
-      <div class="line-box">
-        <div class="line"></div>
-      </div>
-    </label>
-    <button type="submit">submit</button>
-  </form>
-</div>
+    </center>
+  </div>
 </template>
 
 <script>
@@ -79,23 +83,23 @@ export default {
 
 
 <style scoped>
-
-
 #perinfo {
-  /* background:grey; */
+  float:right;
   padding: 5%;
   margin: 0;
-  /* border: 1px solid lightgrey; */
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  /* border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px; */
+  border-radius: 2px;
   height: 700px;
-  border:1px solid lightgrey;
+  border: 1px solid lightgrey;
+}
+
+.pinnerholder {
+  margin:0;
+  padding:0;
 }
 
 .pholder {
-    padding:10%;
+  padding: 10%;
+  width: 100%;
 }
 
 .fname {
@@ -130,7 +134,6 @@ table {
   padding: 0;
   overflow: visible;
 }
-
 
 .body {
   padding: 0;

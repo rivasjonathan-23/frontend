@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../components/signup'
+import Home from '../components/home'
 import login from '../components/Login'
 import FullSignUp from '../components/fullSignUp'
 import PersonalInfo from '../components/personalInfo'
