@@ -14,7 +14,7 @@
     "core-js": "^2.6.5",
     "highlighter": "^0.1.0",
     "jquery": "^3.4.1",
-    "mongoose": "^5.7.3",
+    "mongoose": "^5.7.5",
     "syntax": "^1.5.1",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3"
